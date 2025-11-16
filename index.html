@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urban Vogue - Products</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
         body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #000000, #4b0082); color: #ffffff; line-height: 1.6; animation: fadeIn 1s ease-in; }
         header { background: linear-gradient(135deg, #000000, #4b0082); padding: 2rem; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); animation: slideDown 0.8s ease-out; transition: all 0.3s ease; }
@@ -32,15 +34,44 @@
         @keyframes slideInUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         @keyframes fadeInScale { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
         @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+   
+   #contact {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #10010a;
+  color: #fff;
+  border-top: 2px solid #660066;
+}
+
+#contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff66cc;
+}
+
+#contact p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
     </style>
  </head>
  <body>
   <header>
    <h1>Urban Vogue</h1>
   </header>
-  <nav>
-   <a href="index.html">Home</a> <a href="products.html">Products</a> <a href="index.html#testimonials">Testimonials</a> <a href="index.html#about">About</a> <a href="index.html#contact">Contact</a>
-  </nav>
+   <nav class="menu">
+   &nbsp;  &nbsp;   &nbsp; &nbsp;<a href="#"><i class="fas fa-home"></i> Home</a>
+  <a href="#"><i class="fas fa-box-open"></i> Products</a>   
+&nbsp;&nbsp; &nbsp;<a href="#"><i class="fas fa-info-circle"></i> About</a>
+ &nbsp; <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+   <style>
+   menu a i {
+  margin-right: 8px; /* Icon aur text ke beech space */
+  color: #1f; /* Icon color */
+}
+   </style>
   <section class="products">
    <div class="category">
     <h2>Men's Premium Collection</h2>
@@ -263,6 +294,22 @@
     </div>
    </div>
   </section>
+   <section id="about">
+  <h2>About Us</h2>
+  <p>Urban Vogue is your destination for premium fashion and luxury accessories. We curate the best styles for men, women, and unisex collections.</p>
+</section>
+   <style>
+   #about {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1a001a;
+  color: #fff;
+}
+#about h2 {
+  color: #ff66cc;
+  margin-bottom: 1rem;
+}
+   </style>
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <p>Email: itx.adan@gmail.com</p>
@@ -285,5 +332,5 @@
   <footer>
    <p>© 2023 Urban Vogue. Follow us on social media.</p>
   </footer>
- </body>
- </html>
+
+ 
