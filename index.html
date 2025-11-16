@@ -263,19 +263,27 @@
     </div>
    </div>
   </section>
- <script>   
-  // Smooth scrolling for navigation links
-      document.querySelectorAll('.nav-links a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-       e.preventDefault();
-       document.querySelector(this.getAttribute('href')).scrollIntoView({            behavior: 'smooth
-                 
-      });
- </script>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: itx.adan@gmail.com</p>
+            <p>Phone: (+92)321-4244147</p>
+        </section>
+    </main>
+ <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
   <footer>
    <p>© 2023 Urban Vogue. Follow us on social media.</p>
   </footer>
  </body>
-</html>
+ </html>
