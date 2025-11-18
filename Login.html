@@ -1,25 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neon Login</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #00ffff, #8a2be2, #ff1493);
+            background-size: 400% 400%;
+            animation: gradientShift 5s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ffff, 0 0 40px #8a2be2, 0 0 60px #ff1493;
+            padding: 40px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #8a2be2, #ff1493);
+            border-radius: 10px;
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        h2 {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #8a2be2, 0 0 30px #ff1493;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #ff1493;
+            text-shadow: 0 0 5px #ff1493;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid #00ffff;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            box-shadow: 0 0 10px #00ffff inset;
+            outline: none;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            box-shadow: 0 0 20px #00ffff inset, 0 0 20px #8a2be2;
+            border-color: #8a2be2;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 1px solid #ff1493;
+            border-radius: 5px;
+            color: #ff1493;
+            font-size: 16px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #ff1493;
+            box-shadow: 0 0 10px #ff1493;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            box-shadow: 0 0 20px #ff1493, 0 0 30px #8a2be2;
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff;
+        }
+    </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <div class="input-box">
-        <input type="text" required />
-        <label>Username</label>
-      </div>
-      <div class="input-box">
-        <input type="password" required />
-        <label>Password</label>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
-</html>
+  </html>
+  
